@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from 'react-dom'
+import './index.css'
+import Profile from './App'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const employee = {
+  name: 'Umar',
+  location: 'Satara, Maharashtra',
+  bloodGroup: 'A+',
+  age: 22,
+  profileImg: 'https://www.w3schools.com/howto/img_avatar.png'
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+ReactDOM.render(
+  <>
+    <Profile employee={employee} />
+  </>
+  , document.getElementById('root')
+)
